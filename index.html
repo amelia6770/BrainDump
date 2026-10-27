@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainDump</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Screen 1 - the landing page -->
+    <div id="screen1" class="screen">
+        <h1>Take a breath. Let it out.</h1>
+
+        <p class="smalltext">How are you feeling right now?</p>
+
+        <!-- the tension slider -->
+        <input type="range" id="tensionSlider" min="1" max="5" value="1">
+
+        <div class="slider-labels">
+            <span>Slightly Overwhelmed</span>
+            <span>Complete Burnout</span>
+        </div>
+
+        <p id="sliderText">Slightly Overwhelmed</p>
+
+        <button id="startBtn">I'm ready</button>
+    </div>
+
+
+    <!-- Screen 2 - where you type -->
+    <div id="screen2" class="screen hidden">
+        <h2>This is just for you.</h2>
+
+        <textarea id="thoughtBox" placeholder="Type your raw thoughts here. No filters or edits."></textarea>
+
+        <p id="errorMsg"></p>
+
+        <button id="trashBtn">Trash This Thought</button>
+    </div>
+
+
+    <!-- Screen 3 - its gone -->
+    <div id="screen3" class="screen hidden">
+        <div class="goneBox">
+            <h2>It is officially gone.</h2>
+            <p>Your space is yours again.</p>
+        </div>
+
+        <button id="againBtn">Start over</button>
+
+        <p class="counter">Total thoughts cleared: <span id="countNum">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
